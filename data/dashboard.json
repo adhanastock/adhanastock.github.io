@@ -1,0 +1,20 @@
+[
+  {
+    "ticker": "AAPL",
+    "price": null,
+    "gross_margin": 0.4649070568718363,
+    "rev_growth": -0.009417465500895396
+  },
+  {
+    "ticker": "MSFT",
+    "price": null,
+    "gross_margin": 0.6858492170432098,
+    "rev_growth": 0.16552565373179842
+  },
+  {
+    "ticker": "NVDA",
+    "price": null,
+    "gross_margin": 0.6052380736235304,
+    "rev_growth": 0.46677762982689747
+  }
+]

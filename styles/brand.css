@@ -1,0 +1,46 @@
+/* ------------------------------------------------------
+   Adhana theme tweaks – safe for both light/dark schemes
+   ------------------------------------------------------ */
+
+/* 1) Brand colors via CSS variables (no global background overrides) */
+:root,
+[data-md-color-scheme="default"] {
+  /* primary is already black in mkdocs.yml, this is just to be explicit */
+  --md-primary-fg-color: #111111;
+  --md-accent-fg-color: #607d8b; /* "blue grey" */
+}
+
+/* Dark scheme specific tweaks (optional, keep subtle) */
+[data-md-color-scheme="slate"] {
+  /* DO NOT set body background or body color here */
+  /* If you want a slightly custom dark surface, nudge, don't replace */
+  --md-default-bg-color: #101216; /* very close to Material default */
+}
+
+/* 2) Logo sizing only (don’t invert site colors) */
+.md-header__button.md-logo img {
+  height: 24px;          /* keep header tidy */
+  width: auto;
+}
+
+/* Optional: if your logo looks too dim in dark mode, gently boost it */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* 3) Table readability (no forced backgrounds) */
+.md-typeset table:not([class]) {
+  font-size: 0.95rem;
+}
+
+/* 4) Links – leave colors to Material; just remove underlines on hover (optional) */
+.md-typeset a:hover {
+  text-decoration: none;
+}
+
+/* 5) Cards/Admonitions – spacing only, no color overrides */
+.md-typeset .admonition,
+.md-typeset details {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
