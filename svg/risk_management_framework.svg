@@ -1,0 +1,222 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 18px Arial, sans-serif; fill: #2c3e50; }
+      .subtitle { font: 14px Arial, sans-serif; fill: #34495e; }
+      .label { font: 12px Arial, sans-serif; fill: #34495e; }
+      .small-label { font: 10px Arial, sans-serif; fill: #7f8c8d; }
+      .header { font: bold 12px Arial, sans-serif; fill: #2c3e50; }
+      .low-risk { fill: #27ae60; stroke: #27ae60; }
+      .medium-risk { fill: #f39c12; stroke: #f39c12; }
+      .high-risk { fill: #e74c3c; stroke: #e74c3c; }
+      .framework-box { fill: #ecf0f1; stroke: #34495e; stroke-width: 2; }
+      .arrow { fill: #34495e; }
+      .grid-line { stroke: #bdc3c7; stroke-width: 1; opacity: 0.5; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" class="title">Options Trading Risk Management Framework</text>
+  
+  <!-- Risk Assessment Matrix -->
+  <g transform="translate(50, 60)">
+    <text x="150" y="20" text-anchor="middle" class="subtitle">Risk Assessment Matrix</text>
+    
+    <!-- Grid -->
+    <line x1="50" y1="50" x2="250" y2="50" class="grid-line"/>
+    <line x1="50" y1="100" x2="250" y2="100" class="grid-line"/>
+    <line x1="50" y1="150" x2="250" y2="150" class="grid-line"/>
+    <line x1="50" y1="200" x2="250" y2="200" class="grid-line"/>
+    
+    <line x1="50" y1="50" x2="50" y2="200" class="grid-line"/>
+    <line x1="100" y1="50" x2="100" y2="200" class="grid-line"/>
+    <line x1="150" y1="50" x2="150" y2="200" class="grid-line"/>
+    <line x1="200" y1="50" x2="200" y2="200" class="grid-line"/>
+    <line x1="250" y1="50" x2="250" y2="200" class="grid-line"/>
+    
+    <!-- Risk zones -->
+    <rect x="50" y="50" width="50" height="50" class="low-risk" fill-opacity="0.3"/>
+    <rect x="100" y="50" width="50" height="50" class="low-risk" fill-opacity="0.3"/>
+    <rect x="150" y="50" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    <rect x="200" y="50" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    
+    <rect x="50" y="100" width="50" height="50" class="low-risk" fill-opacity="0.3"/>
+    <rect x="100" y="100" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    <rect x="150" y="100" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    <rect x="200" y="100" width="50" height="50" class="high-risk" fill-opacity="0.3"/>
+    
+    <rect x="50" y="150" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    <rect x="100" y="150" width="50" height="50" class="medium-risk" fill-opacity="0.3"/>
+    <rect x="150" y="150" width="50" height="50" class="high-risk" fill-opacity="0.3"/>
+    <rect x="200" y="150" width="50" height="50" class="high-risk" fill-opacity="0.3"/>
+    
+    <!-- Labels -->
+    <text x="20" y="80" text-anchor="middle" class="small-label" transform="rotate(-90 20 80)">Time to Expiration</text>
+    <text x="150" y="220" text-anchor="middle" class="small-label">Position Size (% of Portfolio)</text>
+    
+    <!-- Axis labels -->
+    <text x="75" y="40" text-anchor="middle" class="small-label">1-2%</text>
+    <text x="125" y="40" text-anchor="middle" class="small-label">3-5%</text>
+    <text x="175" y="40" text-anchor="middle" class="small-label">6-10%</text>
+    <text x="225" y="40" text-anchor="middle" class="small-label">10%+</text>
+    
+    <text x="35" y="80" text-anchor="middle" class="small-label">&gt;30d</text>
+    <text x="35" y="130" text-anchor="middle" class="small-label">7-30d</text>
+    <text x="35" y="180" text-anchor="middle" class="small-label">&lt;7d</text>
+    
+    <!-- Strategy placements -->
+    <circle cx="75" cy="75" r="8" class="low-risk"/>
+    <text x="75" y="95" text-anchor="middle" class="small-label">ITM Calls</text>
+    
+    <circle cx="125" cy="125" r="8" class="medium-risk"/>
+    <text x="125" y="145" text-anchor="middle" class="small-label">ATM Calls</text>
+    
+    <circle cx="175" cy="175" r="8" class="high-risk"/>
+    <text x="175" y="195" text-anchor="middle" class="small-label">OTM Calls</text>
+  </g>
+  
+  <!-- Position Sizing Guidelines -->
+  <g transform="translate(350, 60)">
+    <text x="150" y="20" text-anchor="middle" class="subtitle">Position Sizing Guidelines</text>
+    
+    <rect x="20" y="40" width="280" height="160" class="framework-box"/>
+    
+    <text x="30" y="60" class="header">Conservative Approach (Recommended)</text>
+    <text x="30" y="80" class="label">• Maximum 2-5% per option position</text>
+    <text x="30" y="95" class="label">• Total options exposure ≤ 20% of portfolio</text>
+    <text x="30" y="110" class="label">• ITM/ATM options preferred for core positions</text>
+    
+    <text x="30" y="135" class="header">Aggressive Approach (Higher Risk)</text>
+    <text x="30" y="155" class="label">• Maximum 5-10% per option position</text>
+    <text x="30" y="170" class="label">• Total options exposure ≤ 30% of portfolio</text>
+    <text x="30" y="185" class="label">• OTM options for speculative plays only</text>
+  </g>
+  
+  <!-- Greeks Risk Monitoring -->
+  <g transform="translate(700, 60)">
+    <text x="125" y="20" text-anchor="middle" class="subtitle">Greeks Risk Monitoring</text>
+    
+    <rect x="20" y="40" width="230" height="160" class="framework-box"/>
+    
+    <text x="30" y="60" class="header">Delta Risk</text>
+    <text x="30" y="75" class="label">• Directional exposure to underlying</text>
+    <text x="30" y="90" class="label">• Monitor portfolio delta neutrality</text>
+    
+    <text x="30" y="110" class="header">Theta Risk (Time Decay)</text>
+    <text x="30" y="125" class="label">• Daily premium erosion</text>
+    <text x="30" y="140" class="label">• Accelerates near expiration</text>
+    
+    <text x="30" y="160" class="header">Vega Risk (Volatility)</text>
+    <text x="30" y="175" class="label">• Sensitivity to implied volatility</text>
+    <text x="30" y="190" class="label">• Higher for ATM options</text>
+  </g>
+  
+  <!-- Risk Management Process Flow -->
+  <g transform="translate(50, 320)">
+    <text x="400" y="20" text-anchor="middle" class="subtitle">Risk Management Process Flow</text>
+    
+    <!-- Process boxes -->
+    <rect x="50" y="40" width="120" height="60" class="framework-box"/>
+    <text x="110" y="65" text-anchor="middle" class="header">1. Pre-Trade</text>
+    <text x="110" y="80" text-anchor="middle" class="label">Analysis</text>
+    
+    <rect x="220" y="40" width="120" height="60" class="framework-box"/>
+    <text x="280" y="65" text-anchor="middle" class="header">2. Position</text>
+    <text x="280" y="80" text-anchor="middle" class="label">Entry</text>
+    
+    <rect x="390" y="40" width="120" height="60" class="framework-box"/>
+    <text x="450" y="65" text-anchor="middle" class="header">3. Active</text>
+    <text x="450" y="80" text-anchor="middle" class="label">Monitoring</text>
+    
+    <rect x="560" y="40" width="120" height="60" class="framework-box"/>
+    <text x="620" y="65" text-anchor="middle" class="header">4. Exit</text>
+    <text x="620" y="80" text-anchor="middle" class="label">Strategy</text>
+    
+    <!-- Arrows -->
+    <polygon points="180,70 210,70 200,60 210,70 200,80" class="arrow"/>
+    <polygon points="350,70 380,70 370,60 380,70 370,80" class="arrow"/>
+    <polygon points="520,70 550,70 540,60 550,70 540,80" class="arrow"/>
+    
+    <!-- Details under each box -->
+    <g transform="translate(0, 120)">
+      <text x="110" y="0" text-anchor="middle" class="small-label">• Market analysis</text>
+      <text x="110" y="15" text-anchor="middle" class="small-label">• Volatility assessment</text>
+      <text x="110" y="30" text-anchor="middle" class="small-label">• Position sizing</text>
+      <text x="110" y="45" text-anchor="middle" class="small-label">• Risk/reward ratio</text>
+      
+      <text x="280" y="0" text-anchor="middle" class="small-label">• Optimal timing</text>
+      <text x="280" y="15" text-anchor="middle" class="small-label">• Order execution</text>
+      <text x="280" y="30" text-anchor="middle" class="small-label">• Stop-loss levels</text>
+      <text x="280" y="45" text-anchor="middle" class="small-label">• Profit targets</text>
+      
+      <text x="450" y="0" text-anchor="middle" class="small-label">• P&amp;L tracking</text>
+      <text x="450" y="15" text-anchor="middle" class="small-label">• Greeks monitoring</text>
+      <text x="450" y="30" text-anchor="middle" class="small-label">• Time decay impact</text>
+      <text x="450" y="45" text-anchor="middle" class="small-label">• Adjustment signals</text>
+      
+      <text x="620" y="0" text-anchor="middle" class="small-label">• Profit taking</text>
+      <text x="620" y="15" text-anchor="middle" class="small-label">• Loss cutting</text>
+      <text x="620" y="30" text-anchor="middle" class="small-label">• Rolling positions</text>
+      <text x="620" y="45" text-anchor="middle" class="small-label">• Assignment risk</text>
+    </g>
+  </g>
+  
+  <!-- Common Mistakes to Avoid -->
+  <g transform="translate(50, 520)">
+    <text x="400" y="20" text-anchor="middle" class="subtitle">Common Risk Management Mistakes</text>
+    
+    <rect x="50" y="40" width="700" height="120" class="framework-box"/>
+    
+    <g transform="translate(70, 60)">
+      <circle cx="5" cy="5" r="3" class="high-risk"/>
+      <text x="15" y="10" class="label">Oversizing positions relative to account value</text>
+      
+      <circle cx="5" cy="25" r="3" class="high-risk"/>
+      <text x="15" y="30" class="label">Ignoring time decay on short-term OTM options</text>
+      
+      <circle cx="5" cy="45" r="3" class="high-risk"/>
+      <text x="15" y="50" class="label">Lack of predefined exit strategy</text>
+      
+      <circle cx="5" cy="65" r="3" class="high-risk"/>
+      <text x="15" y="70" class="label">Failing to monitor implied volatility levels</text>
+      
+      <circle cx="5" cy="85" r="3" class="high-risk"/>
+      <text x="15" y="90" class="label">Concentrating risk in single expiration dates</text>
+    </g>
+    
+    <g transform="translate(420, 60)">
+      <circle cx="5" cy="5" r="3" class="high-risk"/>
+      <text x="15" y="10" class="label">Not accounting for assignment risk on ITM shorts</text>
+      
+      <circle cx="5" cy="25" r="3" class="high-risk"/>
+      <text x="15" y="30" class="label">Emotional decision making during losses</text>
+      
+      <circle cx="5" cy="45" r="3" class="high-risk"/>
+      <text x="15" y="50" class="label">Inadequate diversification across strategies</text>
+      
+      <circle cx="5" cy="65" r="3" class="high-risk"/>
+      <text x="15" y="70" class="label">Trading without sufficient capital reserves</text>
+      
+      <circle cx="5" cy="85" r="3" class="high-risk"/>
+      <text x="15" y="90" class="label">Overleveraging through margin requirements</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(750, 520)">
+    <rect x="0" y="0" width="200" height="120" fill="white" stroke="#34495e" stroke-width="1"/>
+    <text x="100" y="20" text-anchor="middle" class="header">Risk Levels</text>
+    
+    <rect x="10" y="30" width="15" height="15" class="low-risk"/>
+    <text x="30" y="42" class="label">Low Risk</text>
+    
+    <rect x="10" y="50" width="15" height="15" class="medium-risk"/>
+    <text x="30" y="62" class="label">Medium Risk</text>
+    
+    <rect x="10" y="70" width="15" height="15" class="high-risk"/>
+    <text x="30" y="82" class="label">High Risk</text>
+    
+    <text x="15" y="100" class="small-label">Risk increases with:</text>
+    <text x="15" y="112" class="small-label">• Position size • Time decay</text>
+  </g>
+</svg>

@@ -1,0 +1,147 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 18px Arial, sans-serif; fill: #2c3e50; }
+      .subtitle { font: 14px Arial, sans-serif; fill: #34495e; }
+      .label { font: 12px Arial, sans-serif; fill: #34495e; }
+      .value-label { font: bold 14px Arial, sans-serif; fill: #2c3e50; }
+      .axis-label { font: 12px Arial, sans-serif; fill: #7f8c8d; }
+      .intrinsic { fill: #27ae60; }
+      .extrinsic { fill: #3498db; }
+      .border { stroke: #34495e; stroke-width: 2; fill: none; }
+      .divider { stroke: #34495e; stroke-width: 1; stroke-dasharray: 3,3; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Option Premium Value Components</text>
+  <text x="450" y="50" text-anchor="middle" class="subtitle">Breakdown of Intrinsic vs. Extrinsic Value</text>
+  
+  <!-- ATM Option Example -->
+  <g transform="translate(50, 100)">
+    <text x="100" y="20" text-anchor="middle" class="subtitle">ATM Option ($100 Strike)</text>
+    
+    <!-- Premium Bar -->
+    <rect x="20" y="40" width="160" height="80" class="extrinsic border"/>
+    
+    <!-- Labels -->
+    <text x="100" y="85" text-anchor="middle" class="value-label" fill="white">$20.00 Premium</text>
+    <text x="100" y="100" text-anchor="middle" class="label" fill="white">100% Extrinsic Value</text>
+    
+    <!-- Bottom Labels -->
+    <text x="100" y="140" text-anchor="middle" class="label">Stock Price: $100</text>
+    <text x="100" y="155" text-anchor="middle" class="label">Strike Price: $100</text>
+    <text x="100" y="170" text-anchor="middle" class="label">Intrinsic Value: $0</text>
+  </g>
+  
+  <!-- OTM Option Example -->
+  <g transform="translate(300, 100)">
+    <text x="100" y="20" text-anchor="middle" class="subtitle">OTM Option ($120 Strike)</text>
+    
+    <!-- Premium Bar -->
+    <rect x="20" y="40" width="160" height="50" class="extrinsic border"/>
+    
+    <!-- Labels -->
+    <text x="100" y="70" text-anchor="middle" class="value-label" fill="white">$10.00 Premium</text>
+    <text x="100" y="85" text-anchor="middle" class="label" fill="white">100% Extrinsic Value</text>
+    
+    <!-- Bottom Labels -->
+    <text x="100" y="110" text-anchor="middle" class="label">Stock Price: $100</text>
+    <text x="100" y="125" text-anchor="middle" class="label">Strike Price: $120</text>
+    <text x="100" y="140" text-anchor="middle" class="label">Intrinsic Value: $0</text>
+  </g>
+  
+  <!-- ITM Option Example -->
+  <g transform="translate(550, 100)">
+    <text x="125" y="20" text-anchor="middle" class="subtitle">ITM Option ($80 Strike)</text>
+    
+    <!-- Premium Bar with two sections -->
+    <rect x="20" y="40" width="210" height="50" class="intrinsic"/>
+    <rect x="20" y="90" width="210" height="75" class="extrinsic"/>
+    <rect x="20" y="40" width="210" height="125" class="border"/>
+    
+    <!-- Divider line -->
+    <line x1="20" y1="90" x2="230" y2="90" class="divider"/>
+    
+    <!-- Labels -->
+    <text x="125" y="70" text-anchor="middle" class="value-label" fill="white">$20.00 Intrinsic Value</text>
+    <text x="125" y="130" text-anchor="middle" class="value-label" fill="white">$30.00 Extrinsic Value</text>
+    <text x="125" y="150" text-anchor="middle" class="label" fill="white">$50.00 Total Premium</text>
+    
+    <!-- Bottom Labels -->
+    <text x="125" y="185" text-anchor="middle" class="label">Stock Price: $100</text>
+    <text x="125" y="200" text-anchor="middle" class="label">Strike Price: $80</text>
+    <text x="125" y="215" text-anchor="middle" class="label">Intrinsic: $100 - $80 = $20</text>
+  </g>
+  
+  <!-- Formulas Section -->
+  <g transform="translate(50, 350)">
+    <text x="400" y="20" text-anchor="middle" class="subtitle">Premium Calculation Formulas</text>
+    
+    <!-- Formula boxes -->
+    <rect x="50" y="40" width="300" height="80" fill="#ecf0f1" stroke="#34495e" stroke-width="1"/>
+    <text x="200" y="60" text-anchor="middle" class="label" font-weight="bold">Call Option Intrinsic Value</text>
+    <text x="200" y="80" text-anchor="middle" class="value-label">Max(Stock Price - Strike Price, 0)</text>
+    <text x="200" y="100" text-anchor="middle" class="label">Example: Max($100 - $80, 0) = $20</text>
+    
+    <rect x="400" y="40" width="300" height="80" fill="#ecf0f1" stroke="#34495e" stroke-width="1"/>
+    <text x="550" y="60" text-anchor="middle" class="label" font-weight="bold">Total Premium</text>
+    <text x="550" y="80" text-anchor="middle" class="value-label">Intrinsic Value + Extrinsic Value</text>
+    <text x="550" y="100" text-anchor="middle" class="label">Example: $20 + $30 = $50</text>
+    
+    <rect x="225" y="140" width="300" height="80" fill="#ecf0f1" stroke="#34495e" stroke-width="1"/>
+    <text x="375" y="160" text-anchor="middle" class="label" font-weight="bold">Extrinsic Value</text>
+    <text x="375" y="180" text-anchor="middle" class="value-label">Total Premium - Intrinsic Value</text>
+    <text x="375" y="200" text-anchor="middle" class="label">Time Value + Volatility Premium</text>
+  </g>
+  
+  <!-- Time Decay Illustration -->
+  <g transform="translate(50, 450)">
+    <text x="400" y="20" text-anchor="middle" class="subtitle">Extrinsic Value Components Over Time</text>
+    
+    <!-- Time progression bars -->
+    <g transform="translate(0, 30)">
+      <text x="50" y="15" class="label">90 Days</text>
+      <rect x="100" y="0" width="200" height="20" class="extrinsic"/>
+      <text x="205" y="15" text-anchor="middle" class="label" fill="white">High Time Value</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+      <text x="50" y="15" class="label">30 Days</text>
+      <rect x="100" y="0" width="150" height="20" class="extrinsic"/>
+      <text x="175" y="15" text-anchor="middle" class="label" fill="white">Medium Time Value</text>
+    </g>
+    
+    <g transform="translate(0, 90)">
+      <text x="50" y="15" class="label">7 Days</text>
+      <rect x="100" y="0" width="75" height="20" class="extrinsic"/>
+      <text x="137" y="15" text-anchor="middle" class="label" fill="white">Low Time Value</text>
+    </g>
+    
+    <g transform="translate(0, 120)">
+      <text x="50" y="15" class="label">Expiry</text>
+      <rect x="100" y="0" width="25" height="20" class="extrinsic"/>
+      <text x="112" y="15" text-anchor="middle" class="label" fill="white">$0</text>
+    </g>
+    
+    <!-- Arrow showing decay -->
+    <polygon points="350,35 350,135 360,125 350,135 340,125" fill="#e74c3c"/>
+    <text x="370" y="90" class="label" fill="#e74c3c">Time Decay (Theta)</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(650, 450)">
+    <rect x="0" y="0" width="200" height="120" fill="white" stroke="#34495e" stroke-width="1"/>
+    <text x="100" y="20" text-anchor="middle" class="label" font-weight="bold">Value Components</text>
+    
+    <rect x="10" y="30" width="20" height="15" class="intrinsic"/>
+    <text x="35" y="42" class="label">Intrinsic Value</text>
+    <text x="35" y="55" class="axis-label">Immediate exercise benefit</text>
+    
+    <rect x="10" y="65" width="20" height="15" class="extrinsic"/>
+    <text x="35" y="77" class="label">Extrinsic Value</text>
+    <text x="35" y="90" class="axis-label">Time + Volatility premium</text>
+    
+    <text x="35" y="105" class="axis-label">Decays to zero at expiration</text>
+  </g>
+</svg>

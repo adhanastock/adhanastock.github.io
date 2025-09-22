@@ -1,0 +1,1556 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://adhanastock.github.io/knowledge-base/02-option-trade/">
+      
+      
+        <link rel="prev" href="../stock-decision-guide/">
+      
+      
+        <link rel="next" href="../data-sources/">
+      
+      
+      <link rel="icon" href="../../assets/adhana.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Fundamental - Adhana Stock Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue-grey">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#option-trading-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Adhana Stock Lab" class="md-header__button md-logo" aria-label="Adhana Stock Lab" data-md-component="logo">
+      
+  <img src="../../assets/adhana.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adhana Stock Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fundamental
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue-grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue-grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dashboard/dashboard/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dashboard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../templates/stock-decision-template/" class="md-tabs__link">
+          
+  
+  
+  Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../positions/" class="md-tabs__link">
+          
+  
+  
+  Positions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Knowledge Base
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adhana Stock Lab" class="md-nav__button md-logo" aria-label="Adhana Stock Lab" data-md-component="logo">
+      
+  <img src="../../assets/adhana.png" alt="logo">
+
+    </a>
+    Adhana Stock Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Templates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/stock-decision-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Full Memo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/stock-one-pager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    One-Pager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Positions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Positions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../positions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Base
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stock-decision-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock Decision Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Option Trading
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Option Trading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fundamental
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fundamental
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Navigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-moneyness-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Moneyness Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-the-money-atm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      At The Money (ATM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="At The Money (ATM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-the-money-otm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Out of The Money (OTM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Out of The Money (OTM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-money-itm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      In The Money (ITM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In The Money (ITM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premium-valuation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Premium Valuation Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Premium Valuation Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intrinsic-value-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrinsic Value Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extrinsic-value-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extrinsic Value Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-influencing-extrinsic-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Influencing Extrinsic Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-trading-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Trading Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Trading Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-trading-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Trading Mistakes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      References &amp; Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Navigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-moneyness-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Moneyness Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-the-money-atm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      At The Money (ATM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="At The Money (ATM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-the-money-otm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Out of The Money (OTM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Out of The Money (OTM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-money-itm-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      In The Money (ITM) Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In The Money (ITM) Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-calculation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premium-valuation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Premium Valuation Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Premium Valuation Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intrinsic-value-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrinsic Value Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extrinsic-value-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extrinsic Value Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-influencing-extrinsic-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Influencing Extrinsic Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-trading-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Trading Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Trading Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-trading-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Trading Mistakes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      References &amp; Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="option-trading-fundamentals">Option Trading Fundamentals<a class="headerlink" href="#option-trading-fundamentals" title="Permanent link">&para;</a></h1>
+<p><a id="top"></a></p>
+<h2 id="quick-navigation">Quick Navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#option-moneyness-overview">Option Moneyness Overview</a></li>
+<li><a href="#at-the-money-atm-options">At The Money (ATM) Options</a></li>
+<li><a href="#out-of-the-money-otm-options">Out of The Money (OTM) Options</a></li>
+<li><a href="#in-the-money-itm-options">In The Money (ITM) Options</a></li>
+<li><a href="#premium-valuation-framework">Premium Valuation Framework</a></li>
+<li><a href="#practical-trading-applications">Practical Trading Applications</a></li>
+<li><a href="#references--further-reading">References &amp; Further Reading</a></li>
+</ul>
+<h2 id="option-moneyness-overview">Option Moneyness Overview<a class="headerlink" href="#option-moneyness-overview" title="Permanent link">&para;</a></h2>
+<p>Option moneyness describes the relationship between an option's strike price and the current stock price. This fundamental concept determines the option's intrinsic value and influences its premium structure.</p>
+<p><img alt="Option Moneyness Diagram" src="../../../svg/option_moneyness_comparison.svg" /></p>
+<p>The three primary categories of option moneyness are:</p>
+<ul>
+<li><strong>At The Money (ATM)</strong>: Strike price equals current stock price</li>
+<li><strong>Out of The Money (OTM)</strong>: Strike price differs unfavorably from current stock price</li>
+<li><strong>In The Money (ITM)</strong>: Strike price differs favorably from current stock price</li>
+</ul>
+<p>Understanding moneyness is crucial for:</p>
+<ul>
+<li>Premium valuation and pricing</li>
+<li>Risk assessment and management</li>
+<li>Strategic option selection</li>
+<li>Profit and loss calculations</li>
+</ul>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="at-the-money-atm-options">At The Money (ATM) Options<a class="headerlink" href="#at-the-money-atm-options" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p>At The Money options occur when the strike price equals the current underlying stock price. These options represent the equilibrium point between intrinsic and extrinsic value.</p>
+<h3 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zero intrinsic value</strong>: No immediate exercise benefit</li>
+<li><strong>Maximum time value</strong>: Highest extrinsic value relative to nearby strikes</li>
+<li><strong>High gamma exposure</strong>: Significant price sensitivity to underlying movements</li>
+<li><strong>Optimal for volatility plays</strong>: Best suited for strategies anticipating price movement</li>
+</ul>
+<h3 id="example-calculation">Example Calculation<a class="headerlink" href="#example-calculation" title="Permanent link">&para;</a></h3>
+<p><strong>Given:</strong>
+- Current Stock Price: $100.00
+- Strike Price: $100.00
+- Option Premium: $20.00</p>
+<p><strong>Valuation Breakdown:</strong></p>
+<p>$begin:math:display$
+\text{Intrinsic Value} = \max(S_0 - K, 0) = \max(100 - 100, 0) = \$0.00
+$end:math:display$</p>
+<p>$begin:math:display$
+\text{Extrinsic Value} = \text{Premium} - \text{Intrinsic Value} = \$20.00 - \$0.00 = \$20.00
+$end:math:display$</p>
+<p>Where:
+- $S_0$ = Current stock price
+- $K$ = Strike price</p>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="out-of-the-money-otm-options">Out of The Money (OTM) Options<a class="headerlink" href="#out-of-the-money-otm-options" title="Permanent link">&para;</a></h2>
+<h3 id="definition_1">Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h3>
+<p>Out of The Money options have strike prices that would result in an unfavorable exercise scenario. For call options, the strike price exceeds the current stock price.</p>
+<h3 id="characteristics_1">Characteristics<a class="headerlink" href="#characteristics_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zero intrinsic value</strong>: No beneficial exercise opportunity</li>
+<li><strong>Lower premium cost</strong>: Reduced upfront investment requirement</li>
+<li><strong>Higher probability of expiring worthless</strong>: Increased risk of total loss</li>
+<li><strong>Leveraged exposure</strong>: Significant percentage gains possible with favorable moves</li>
+</ul>
+<h3 id="example-calculation_1">Example Calculation<a class="headerlink" href="#example-calculation_1" title="Permanent link">&para;</a></h3>
+<p><strong>Given:</strong>
+- Current Stock Price: $100.00
+- Strike Price: $120.00
+- Option Premium: $10.00</p>
+<p><strong>Valuation Breakdown:</strong></p>
+<p>$begin:math:display$
+\text{Intrinsic Value} = \max(S_0 - K, 0) = \max(100 - 120, 0) = \$0.00
+$end:math:display$</p>
+<p>$begin:math:display$
+\text{Extrinsic Value} = \text{Premium} - \text{Intrinsic Value} = \$10.00 - \$0.00 = \$10.00
+$end:math:display$</p>
+<p><strong>Note</strong>: The entire premium consists of extrinsic (time) value, making these options highly sensitive to time decay.</p>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="in-the-money-itm-options">In The Money (ITM) Options<a class="headerlink" href="#in-the-money-itm-options" title="Permanent link">&para;</a></h2>
+<h3 id="definition_2">Definition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h3>
+<p>In The Money options possess intrinsic value due to favorable strike prices relative to the current stock price. For call options, the strike price is below the current stock price.</p>
+<h3 id="characteristics_2">Characteristics<a class="headerlink" href="#characteristics_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Positive intrinsic value</strong>: Immediate exercise benefit exists</li>
+<li><strong>Higher premium cost</strong>: Increased upfront capital requirement</li>
+<li><strong>Lower time decay sensitivity</strong>: Intrinsic value component provides downside protection</li>
+<li><strong>Higher delta exposure</strong>: Greater price correlation with underlying asset movements</li>
+</ul>
+<h3 id="example-calculation_2">Example Calculation<a class="headerlink" href="#example-calculation_2" title="Permanent link">&para;</a></h3>
+<p><strong>Given:</strong>
+- Current Stock Price: $100.00
+- Strike Price: $80.00
+- Option Premium: $50.00</p>
+<p><strong>Valuation Breakdown:</strong></p>
+<p>$begin:math:display$
+\text{Intrinsic Value} = \max(S_0 - K, 0) = \max(100 - 80, 0) = \$20.00
+$end:math:display$</p>
+<p>$begin:math:display$
+\text{Extrinsic Value} = \text{Premium} - \text{Intrinsic Value} = \$50.00 - \$20.00 = \$30.00
+$end:math:display$</p>
+<p>This option contains both intrinsic value ($20.00) and time value ($30.00) components.</p>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="premium-valuation-framework">Premium Valuation Framework<a class="headerlink" href="#premium-valuation-framework" title="Permanent link">&para;</a></h2>
+<p><img alt="Premium Breakdown" src="../../../svg/option_premium_breakdown.svg" /></p>
+<h3 id="intrinsic-value-component">Intrinsic Value Component<a class="headerlink" href="#intrinsic-value-component" title="Permanent link">&para;</a></h3>
+<p>The intrinsic value represents the immediate exercise value of an option:</p>
+<p><strong>For Call Options:</strong></p>
+<p>$begin:math:display$
+\text{Intrinsic Value} = \max(S_0 - K, 0)
+$end:math:display$</p>
+<p><strong>For Put Options:</strong></p>
+<p>$begin:math:display$
+\text{Intrinsic Value} = \max(K - S_0, 0)
+$end:math:display$</p>
+<h3 id="extrinsic-value-component">Extrinsic Value Component<a class="headerlink" href="#extrinsic-value-component" title="Permanent link">&para;</a></h3>
+<p>Extrinsic value encompasses time value and volatility premium:</p>
+<p>$begin:math:display$
+\text{Extrinsic Value} = \text{Total Premium} - \text{Intrinsic Value}
+$end:math:display$</p>
+<h3 id="factors-influencing-extrinsic-value">Factors Influencing Extrinsic Value<a class="headerlink" href="#factors-influencing-extrinsic-value" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Time to expiration</strong>: Longer duration increases time value</li>
+<li><strong>Implied volatility</strong>: Higher volatility increases premium</li>
+<li><strong>Interest rates</strong>: Risk-free rate affects option pricing</li>
+<li><strong>Dividend expectations</strong>: Expected payouts influence valuations</li>
+</ul>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="practical-trading-applications">Practical Trading Applications<a class="headerlink" href="#practical-trading-applications" title="Permanent link">&para;</a></h2>
+<p><img alt="Risk Management Framework" src="../../../svg/risk_management_framework.svg" /></p>
+<h3 id="strategic-considerations">Strategic Considerations<a class="headerlink" href="#strategic-considerations" title="Permanent link">&para;</a></h3>
+<p><strong>ATM Options:</strong>
+- Suitable for volatility-based strategies
+- Optimal for straddles and strangles
+- Balanced risk-reward profiles</p>
+<p><strong>OTM Options:</strong>
+- Cost-effective directional plays
+- Higher leverage potential
+- Appropriate for speculation with limited capital</p>
+<p><strong>ITM Options:</strong>
+- Conservative approach with downside protection
+- Suitable for covered call strategies
+- Lower percentage risk of total loss</p>
+<h3 id="risk-management-guidelines">Risk Management Guidelines<a class="headerlink" href="#risk-management-guidelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Position sizing</strong>: Limit individual option positions to 2-5% of portfolio</li>
+<li><strong>Time decay awareness</strong>: Monitor theta exposure, especially for short-term positions</li>
+<li><strong>Volatility considerations</strong>: Assess implied volatility levels before entry</li>
+<li><strong>Exit strategies</strong>: Establish profit targets and stop-loss levels</li>
+</ul>
+<h3 id="common-trading-mistakes">Common Trading Mistakes<a class="headerlink" href="#common-trading-mistakes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ignoring time decay impact on OTM positions</li>
+<li>Overestimating probability of favorable outcomes</li>
+<li>Inadequate position sizing relative to account value</li>
+<li>Failure to consider assignment risk for ITM short positions</li>
+</ul>
+<p><a href="#top">↩ Back to Top</a></p>
+<h2 id="references-further-reading">References &amp; Further Reading<a class="headerlink" href="#references-further-reading" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Hull, J. C.</strong> (2021). <em>Options, Futures, and Other Derivatives</em> (11th ed.). Pearson Education.</p>
+</li>
+<li>
+<p><strong>Black, F., &amp; Scholes, M.</strong> (1973). The Pricing of Options and Corporate Liabilities. <em>Journal of Political Economy</em>, 81(3), 637-654.</p>
+</li>
+<li>
+<p><strong>Natenberg, S.</strong> (2014). <em>Option Volatility and Pricing: Advanced Trading Strategies and Techniques</em> (2nd ed.). McGraw-Hill Education.</p>
+</li>
+<li>
+<p><strong>Chicago Board Options Exchange (CBOE).</strong> (2024). <em>Options Strategy Guide</em>. Retrieved from https://www.cboe.com/education/</p>
+</li>
+<li>
+<p><strong>McMillan, L. G.</strong> (2012). <em>Options as a Strategic Investment</em> (5th ed.). Prentice Hall Press.</p>
+</li>
+<li>
+<p><strong>Sinclair, E.</strong> (2013). <em>Option Trading: Pricing and Volatility Strategies and Techniques</em>. Wiley Trading.</p>
+</li>
+<li>
+<p><strong>Augen, J.</strong> (2009). <em>The Volatility Edge in Options Trading</em>. FT Press.</p>
+</li>
+<li>
+<p><strong>Securities and Exchange Commission (SEC).</strong> (2024). <em>Investor Bulletin: Options</em>. Retrieved from https://www.sec.gov/investor/alerts/</p>
+</li>
+</ol>
+<p><a href="#top">↩ Back to Top</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

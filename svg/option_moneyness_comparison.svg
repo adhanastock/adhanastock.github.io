@@ -1,0 +1,103 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 18px Arial, sans-serif; fill: #2c3e50; }
+      .label { font: 14px Arial, sans-serif; fill: #34495e; }
+      .axis-label { font: 12px Arial, sans-serif; fill: #7f8c8d; }
+      .grid-line { stroke: #ecf0f1; stroke-width: 1; }
+      .axis-line { stroke: #34495e; stroke-width: 2; }
+      .otm-area { fill: #e74c3c; fill-opacity: 0.2; }
+      .atm-line { stroke: #f39c12; stroke-width: 3; stroke-dasharray: 5,5; }
+      .itm-area { fill: #27ae60; fill-opacity: 0.2; }
+      .stock-price { stroke: #3498db; stroke-width: 3; }
+      .strike-marker { fill: #2c3e50; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Option Moneyness Classification</text>
+  
+  <!-- Grid Lines -->
+  <g class="grid">
+    <line x1="100" y1="80" x2="100" y2="420" class="grid-line"/>
+    <line x1="200" y1="80" x2="200" y2="420" class="grid-line"/>
+    <line x1="300" y1="80" x2="300" y2="420" class="grid-line"/>
+    <line x1="400" y1="80" x2="400" y2="420" class="grid-line"/>
+    <line x1="500" y1="80" x2="500" y2="420" class="grid-line"/>
+    <line x1="600" y1="80" x2="600" y2="420" class="grid-line"/>
+    <line x1="700" y1="80" x2="700" y2="420" class="grid-line"/>
+  </g>
+  
+  <!-- Axes -->
+  <line x1="80" y1="420" x2="720" y2="420" class="axis-line"/>
+  <line x1="80" y1="420" x2="80" y2="60" class="axis-line"/>
+  
+  <!-- Axis Labels -->
+  <text x="400" y="450" text-anchor="middle" class="axis-label">Strike Price ($)</text>
+  <text x="30" y="240" text-anchor="middle" class="axis-label" transform="rotate(-90 30 240)">Option Value</text>
+  
+  <!-- Strike Price Scale -->
+  <text x="100" y="440" text-anchor="middle" class="axis-label">80</text>
+  <text x="200" y="440" text-anchor="middle" class="axis-label">90</text>
+  <text x="300" y="440" text-anchor="middle" class="axis-label">100</text>
+  <text x="400" y="440" text-anchor="middle" class="axis-label">110</text>
+  <text x="500" y="440" text-anchor="middle" class="axis-label">120</text>
+  <text x="600" y="440" text-anchor="middle" class="axis-label">130</text>
+  <text x="700" y="440" text-anchor="middle" class="axis-label">140</text>
+  
+  <!-- Moneyness Regions -->
+  <!-- ITM Area (Strike < Stock Price) -->
+  <polygon points="80,420 300,420 300,180 80,420" class="itm-area"/>
+  <text x="190" y="350" text-anchor="middle" class="label" font-weight="bold" fill="#27ae60">ITM</text>
+  <text x="190" y="370" text-anchor="middle" class="axis-label">In The Money</text>
+  <text x="190" y="385" text-anchor="middle" class="axis-label">Strike &lt; Stock Price</text>
+  
+  <!-- ATM Line (Strike = Stock Price) -->
+  <line x1="300" y1="80" x2="300" y2="420" class="atm-line"/>
+  <text x="320" y="100" class="label" font-weight="bold" fill="#f39c12">ATM</text>
+  <text x="320" y="120" class="axis-label">At The Money</text>
+  <text x="320" y="135" class="axis-label">Strike = Stock Price ($100)</text>
+  
+  <!-- OTM Area (Strike > Stock Price) -->
+  <polygon points="300,420 700,420 700,80 300,180" class="otm-area"/>
+  <text x="500" y="350" text-anchor="middle" class="label" font-weight="bold" fill="#e74c3c">OTM</text>
+  <text x="500" y="370" text-anchor="middle" class="axis-label">Out of The Money</text>
+  <text x="500" y="385" text-anchor="middle" class="axis-label">Strike &gt; Stock Price</text>
+  
+  <!-- Current Stock Price Line -->
+  <line x1="300" y1="60" x2="300" y2="420" class="stock-price"/>
+  <circle cx="300" cy="60" r="4" class="strike-marker"/>
+  <text x="310" y="70" class="label" fill="#3498db">Current Stock Price: $100</text>
+  
+  <!-- Intrinsic Value Line for ITM -->
+  <line x1="80" y1="420" x2="300" y2="180" stroke="#27ae60" stroke-width="2"/>
+  <text x="150" y="320" class="axis-label" fill="#27ae60">Intrinsic Value</text>
+  
+  <!-- Example Strike Points -->
+  <circle cx="200" cy="420" r="5" class="strike-marker"/>
+  <text x="200" y="405" text-anchor="middle" class="axis-label">$90 Strike</text>
+  
+  <circle cx="400" cy="420" r="5" class="strike-marker"/>
+  <text x="400" y="405" text-anchor="middle" class="axis-label">$110 Strike</text>
+  
+  <!-- Legend -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="180" height="120" fill="white" stroke="#34495e" stroke-width="1"/>
+    <text x="90" y="20" text-anchor="middle" class="label" font-weight="bold">Legend</text>
+    
+    <line x1="10" y1="35" x2="30" y2="35" class="stock-price"/>
+    <text x="35" y="40" class="axis-label">Current Stock Price</text>
+    
+    <rect x="10" y="45" width="20" height="10" class="itm-area"/>
+    <text x="35" y="55" class="axis-label">ITM Region</text>
+    
+    <line x1="10" y1="65" x2="30" y2="65" class="atm-line"/>
+    <text x="35" y="70" class="axis-label">ATM Line</text>
+    
+    <rect x="10" y="75" width="20" height="10" class="otm-area"/>
+    <text x="35" y="85" class="axis-label">OTM Region</text>
+    
+    <line x1="10" y1="95" x2="30" y2="95" stroke="#27ae60" stroke-width="2"/>
+    <text x="35" y="100" class="axis-label">Intrinsic Value</text>
+  </g>
+</svg>
